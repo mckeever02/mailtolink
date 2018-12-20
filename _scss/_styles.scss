@@ -64,8 +64,8 @@ body, input, textarea {
 }
 
 .btn-mode {
-  width: 20px;
-  height: 20px;
+  width: 24px;
+  height: 24px;
   transition: transform .3s ease;
   path:first-of-type {
     fill: $white;
@@ -134,7 +134,7 @@ body, input, textarea {
 }
 
 .email-window {
-  max-width: 60rem;
+  max-width: 67rem;
   background-color: $white;
   position: relative;
   z-index: 99;

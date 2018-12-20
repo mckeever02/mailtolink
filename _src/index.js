@@ -142,9 +142,6 @@ copyCode.addEventListener("click", function (e) {
 
 });
 
-
-
-
 clipboard.on('success', function (e, el) {
     //document.getElementById('copy').innerHTML = 'Copied';
     // console.info('Action:', e.action);
@@ -160,8 +157,6 @@ clipboard.on('success', function (e, el) {
             copyCode.innerHTML = 'Copy Code';
         }
     });
-
-
 });
 
 var user = 'mckeever02';
