@@ -7,14 +7,14 @@ const WebpackPwaManifest = require('webpack-pwa-manifest');
 module.exports = Merge(ProdConfig, {
   plugins: [
     new WebpackPwaManifest({
-      name: 'Super-website',
-      short_name: 'Super PWA',
-      description: 'A super website made with love',
+      name: 'mailtolink.me',
+      short_name: 'mailtolink.me',
+      description: 'A quick and easy way to generate markup for mailto links without having to worry about the annoying formatting.',
       orientation: 'portrait',
       display: 'standalone',
       start_url: '/',
-      theme_color: '#c0ffee',
-      background_color: '#ffffff',
+      theme_color: '#9eebcf',
+      background_color: '#111111',
       icons: [
         {
           src: path.resolve('icon.png'),
