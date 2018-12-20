@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+
+  <head>
+    {% include head.html %}
+
+    <!-- <script>
+
+      function bgMode() {
+          body.classList.add(colorMode);
+        }
+    </script> -->
+  </head>
+
+  <body class="h-100 flex bg-tile light">
+
+    {{ content }}
+
+    {% include footer.html %}
+
+    {% include scripts.html %}
+
+  </body>
+
+</html>

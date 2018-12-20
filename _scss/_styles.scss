@@ -1,0 +1,361 @@
+
+// Converted Variables
+
+
+// Custom Media Query Variables
+
+
+/*
+
+  STYLES
+
+  Add custom styles here.
+
+*/
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.label {
+  display: none;
+}
+
+html, body {
+    background-color: $black;
+}
+
+body {
+  padding-top: 8rem;
+  overflow: hidden;
+}
+
+body, input, textarea {
+  font-family: 'IBM Plex Mono', sans-serif;
+  font-style: normal;
+}
+
+.email-body {
+  background-color: $white;
+  transition: all $mode-timing ease;
+  height: 100%;
+  &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: $black;
+  }
+  &::-moz-placeholder { /* Firefox 19+ */
+    color: $black;
+  }
+  &:-ms-input-placeholder { /* IE 10+ */
+    color: $black;
+  }
+  &:-moz-placeholder { /* Firefox 18- */
+    color: $black;
+  }
+  @media (min-width: 1921px ) {
+    min-height: 70vh;
+  }
+}
+
+.btn-mode {
+  width: 20px;
+  height: 20px;
+  transition: transform .3s ease;
+  path:first-of-type {
+    fill: $white;
+  }
+  path:last-of-type {
+    fill: $black;
+  }
+  &:hover {
+    transform: rotate(180deg);
+  }
+}
+
+.btn-mode-dark {
+  path:first-of-type {
+    fill: $black;
+  }
+  path:last-of-type {
+    fill: $white;
+  }
+}
+
+.gh-button {
+  color: $near-black;
+  &:hover {
+    .tooltip {
+      transform: translateX(0);
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+
+.tooltip {
+  color: $white;
+  transition: all $mode-timing ease;
+  background-color: $near-black;
+  font-size: $font-size-7;
+  border-radius: $border-radius-2;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateX(-5px);
+  &:before {
+    content: "";
+    position: absolute;
+    left: -4px;
+    top: calc(50% - 4px);
+    width: 0; 
+    height: 0; 
+    border-top:  4px solid transparent;
+    border-bottom:  4px solid transparent; 
+    border-right: 4px solid $black;
+  }
+}
+
+.btn-sm {
+  border: 1px solid $gray-30;
+  color: $gray-40;
+  width: 60px;
+  text-decoration: none;
+  transition: all .1s ease;
+  &:hover {
+    background-color: $near-black;
+    color: $white;
+    border-color: $near-black;
+  }
+}
+
+.email-window {
+  max-width: 60rem;
+  background-color: $white;
+  position: relative;
+  z-index: 99;
+  min-height: 95vh;
+  animation: .3s ease 0s 1 slideIn;
+  animation-fill-mode: forwards;
+  transition: background-color $mode-timing ease;
+  &:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: $near-black;
+    position: absolute;
+    top: 1.5rem;
+    right: -1em;
+    z-index: -1;
+    border-radius: $border-radius-3;
+  }
+  @media (min-width: 1921px ) {
+    max-width: 86rem;
+  }
+}
+
+.email-header {
+  border-bottom: 1px solid $gray-20;
+  background-color: $white;
+  transition: all $mode-timing ease;
+}
+
+.email-compose {
+  border-color: $gray-20;
+  transition: all $mode-timing ease;
+}
+
+.app-circle, .app-square, .app-triangle {
+  margin-right: 8px;
+  transition: background-color $mode-timing ease;
+}
+
+.app-circle, .app-square {
+  width: 11.7px;
+  height: 12px;
+  background-color: $black;
+}
+
+.app-circle {
+  border-radius: 9999px;
+}
+
+.app-triangle {
+  width: 0; 
+  height: 0; 
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 12px solid $black;
+  transition: border-color $mode-timing ease;
+}
+
+input, textarea {
+  &:focus {
+    outline: none;
+  }
+}
+
+textarea {
+  resize: none;
+}
+
+.mailto-link-container {
+  visibility: hidden;
+  bottom: 2rem;
+  transform: translateY(8rem);
+  transition: .2s ease;
+  margin: auto;
+  z-index: 200;
+  &.active {
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+.mailto-link {
+  font-size: $font-size-6;
+  transition: all $mode-timing ease;
+  background-color: $near-black;
+  color: $white;
+  box-shadow: 0 10px 40px 0 rgba(17,38,57,0.4);
+  padding: .45rem .45rem .45rem 1.5rem;
+  max-width: 450px;
+  width: 100%;
+    @media (min-width: 500px ) {
+      font-size: $font-size-5;
+    }
+    @media (min-width:  1921px) {
+      max-width: 500px;
+    }
+}
+
+.mailto-text {
+  width: 100%;
+  display: inline-block;
+  white-space: nowrap;
+  line-height: 1.5;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.btn {
+  text-decoration: none;
+  text-align: center;
+  color: $black;
+  display: inline-block;
+  background-color: $light-green;
+  transition: all .2s ease;
+  //text-shadow: 0 1px 1px rgba(0,0,0,.1);
+  transform: scale(1);
+  &:hover, &:focus {
+    background-color: darken($light-green, 5%);
+  }
+  &:hover {
+    transform: scale(.98);
+  }
+  &:active {
+    transform: scale(1.05);
+  }
+}
+
+.btn-md {
+  border-radius: $border-radius-pill;
+  line-height: 40px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  width: 160px;
+}
+.bg-tile {
+  background-image: url('/assets/images/tile.svg');
+  background-repeat: repeat;
+  background-size: 15%;
+  background-position: -3px -3px;
+  background-color: $light-green;
+  transition: all $mode-timing ease;
+  @media (min-width:  1921px) {
+    background-size: 10%;
+  }
+}
+
+::-moz-selection { background: $light-green; }
+::selection { background: $light-green; }
+
+.dark {
+  body, input, textarea {
+    color: $white;
+  }
+  &.bg-tile {
+     background-image: url('/assets/images/tile-dark.svg');
+    background-color: $black;
+  }
+  .email-window, .email-header, .email-compose, .email-body  {
+    background-color: lighten($black, 3%);
+    border-color: darken($black, 20%);
+    &:before {
+      background-color: $white;
+    }
+  }
+  .email-header {
+    color: $white;
+  }
+  .app-circle, .app-square {
+    background-color: $gray-40;
+  }
+  .app-triangle {
+    border-bottom-color: $gray-40!important;
+  }
+  .mailto-link {
+    background-color: $white;
+    color: $black;
+    box-shadow: none;
+  }
+  .btn-sm {
+    border: 1px solid darken($black, 10%);
+    color: $gray-40;
+    width: 60px;
+    text-decoration: none;
+    transition: all .1s ease;
+    &:hover {
+      background-color: $white;
+      color: $near-black;
+      border-color: $white;
+    }
+  }
+  .email-body {
+    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      color: $white;
+    }
+    &::-moz-placeholder { /* Firefox 19+ */
+      color: $white;
+    }
+    &:-ms-input-placeholder { /* IE 10+ */
+      color: $white;
+    }
+    &:-moz-placeholder { /* Firefox 18- */
+      color: $white;
+    }
+  }
+  .gh-button {
+    color: $white;
+    &:hover {
+      .tooltip {
+        transform: translateX(0);
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+  .tooltip {
+    color: $black;
+    background-color: $white;
+    &:before {
+      content: "";
+      border-right: 4px solid $white;
+    }
+  }
+}
+

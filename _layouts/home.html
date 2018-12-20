@@ -1,0 +1,80 @@
+---
+layout: default
+---
+
+<div class="absolute top-0 left-0 pa3">
+  <a title="View mailtolink on Github" class="gh-button link flex items-center justify-center" href="https://github.com/mckeever02/mailto">
+    <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 0h3v1h3v3h-3v2H9V4H6V1h3V0h3zM9 22v2H6v-3H4v-2H3v-3H1v-3H0v-3h1V7h2V4h3v3H4v3H3v3h1v3h2v1h2v2h1v3zm9-1v3h-3v-5h1v-2h2v-1h2v-3h1v-3h-1V7h-2V4h3v3h2v3h1v3h-1v3h-2v3h-1v2h-2z" fill="currentColor" fill-rule="evenodd" /></svg>
+    <span class="gh-button__stat tooltip pv1 ph2 ml2 br2 dib fw7 relative">
+      ⭐
+      <span class="gh-button__stat__text">1</span>
+    </span>
+  </a>
+  
+</div>
+<div class="absolute top-0 right-0 pa3">
+  <button id="nav-light" class="button-reset bg-transparent b--none pa0 btn-mode" type="button">
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <g fill="none" fill-rule="evenodd">
+        <path d="M15 21h3v3H6v-3H3v-3H0V6h3V3h3V0h12v3h3v3h3v12h-3v3h-6zm3-3v3z" />
+        <path d="M15 18v3h-3V3h3v3h3v3h3v6h-3v3h-3z"/>
+      </g>
+    </svg>
+  </button>
+</div>
+
+<div class="w-90 center br--top bw1 br3 email-window">
+  <div class="pv3 ph2 ph3-ns br3 br--top flex justify-center items-center w-100 tc bw1 relative email-header">
+    <div class="absolute left-0 flex flex-row pl2 pl3-ns h-100 justify-between items-center">
+      <div class="app-square dib"></div>
+      <div class="app-triangle dib"></div>
+      <div class="app-circle dib"></div>
+    </div>
+    <h1 class="f5 ma0 fw6">mailtolink.me</h1>
+  </div>
+  <div class="bg-white bb email-compose">
+    <div class="flex flex-row relative items-center justify-center">
+      <label for="recipient" class="f5 gray-40 fw6 pl2 pl3-ns">To:</label>
+      <input id="recipient" tabindex="1" name="recipient" class="input input-reset tagify pv3 h-100 db w-100 bg-transparent b--none pl2 pl3-ns f5"
+        type="email" data-tag="yes">
+      <div class="mr2 mr3-ns">
+        <a class="f6 fw6 br2 ph2 tdn tc pv2 dib btn-sm ccButton" href="javascript:void(0);">Cc:</a>
+      </div>
+      <div class="mr2 mr3-ns">
+        <a class="f6 fw6 br2 ph2 tdn tc pv2 dib btn-sm bccButton" href="javascript:void(0);">Bcc:</a>
+      </div>
+    </div>
+    <div class="dn ccSection">
+      <div class="flex flex-row relative items-center justify-center">
+        <label for="cc" class="f5 fw7 code gray-40 pl2 pl3-ns">Cc:</label>
+        <input id="cc" tabindex="2" name="cc" class="input input-reset pv3 h-100 db w-100 bg-transparent b--none pl2 pl3-ns f5"
+          type="text">
+      </div>
+    </div>
+    <div class="dn bccSection">
+      <div class="flex flex-row relative items-center justify-center">
+        <label for="bcc" class="f5 fw7 code gray-40 pl2 pl3-ns">Bcc:</label>
+        <input id="bcc" tabindex="2" name="bcc" class="input input-reset pv3 h-100 db w-100 bg-transparent b--none pl2 pl3-ns f5"
+          type="text">
+      </div>
+    </div>
+    <div class="b--black bw1 flex flex-row relative items-center justify-center">
+      <label for="subject" class="f5 fw7 code gray-40 pl2 pl3-ns">Subject:</label>
+      <input id="subject" tabindex="2" name="subject" class="input input-reset pv3 h-100 db w-100 bg-transparent b--none pl2 pl3-ns f5"
+        type="text">
+    </div>
+  </div><!-- /bg-gray-10 -->
+  
+  <textarea id="body" name="body" tabindex="3" class="pa3 input input-reset b--none h-100 w-100 email-body f5 lh-copy" placeholder="A quick and easy way to generate markup for mailto links. Just fill out the email and copy your generated code." id="body"></textarea>
+
+</div>
+
+<div class="absolute mailto-link-container w-100 flex justify-center">
+  <div class="output mailto-link white bg-black br-pill b b--white flex flex-row items-center justify-between">
+    <div class="mailto-text">
+      <strong>mailto:</strong><span id="recipientOutput" class="recipientOutput"></span><span id="subjectLabel" class="label">subject=</span><span class="subjectOutput"></span><span id="ccLabel" class="label">cc=</span><span class="ccOutput"></span><span id="bccLabel" class="label">bcc=</span><span class="bccOutput"></span><span id="bodyLabel" class="label">body=</span><span class="bodyOutput"></span>
+    </div>
+    <a class="btn btn-md fw6 ml2 copyCode" href="#">Copy Code</a>
+  </div>
+</div>
