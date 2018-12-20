@@ -165,7 +165,7 @@ clipboard.on('success', function (e, el) {
 });
 
 var user = 'mckeever02';
-var repo = 'mailto';
+var repo = 'mailtolink';
 
 // get data
 var callbackName = 'ghButtonCallback' + Math.floor(Math.random() * 10000);

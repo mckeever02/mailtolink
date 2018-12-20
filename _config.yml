@@ -44,8 +44,6 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
   - octopress-minify-html
-  - jekyll-multiple-languages-plugin
-  - amp-jekyll
 
 ### Exclude from processing.
 exclude:

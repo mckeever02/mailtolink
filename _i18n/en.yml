@@ -1,0 +1,9 @@
+home:
+  header:
+    headline: Your beautiful headline
+    call_to_action:
+      title: Check out our blog
+      link: /blog
+
+footer:
+  love: 'Made with <span class="accent">❤</span>'

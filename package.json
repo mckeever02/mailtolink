@@ -1,13 +1,13 @@
 {
-  "name": "jekyll-webpack-boilerplate",
+  "name": "mailtolink.me",
   "version": "1.0.0",
-  "description": "A boilerplate with Jekyll and Webpack to make the most performant static websites",
+  "description": "A quick and easy way to generate markup for mailto links without having to worry about the annoying formatting. ",
   "main": "src/index.js",
-  "repository": "git@github.com:sandoche/Jekyll-webpack-boilerplate.git",
-  "author": "Sandoche Adittane <sandoche@gmail.com>",
+  "repository": "git@github.com:mckeever02/mailtolink.git",
+  "author": "Michael Mckeever <michael@mckvr.com>",
   "license": "MIT",
   "scripts": {
-    "start": "npm run-script clean:project && webpack --env=dev --progress --profile --colors && concurrently \"webpack-dev-server --env=dev\" \"bundle exec jekyll serve\"",
+    "start": "npm run-script clean:project && webpack --env=dev --progress --profile --colors && concurrently \"webpack-dev-server --env=dev\" \"bundle exec jekyll  serve\"",
     "build:optim": "npm run-script clean:project && cross-env NODE_ENV=production webpack --env=prod --progress --profile --colors && webpack --env=optim  --progress --profile --colors && cross-env JEKYLL_ENV=production bundle exec jekyll build",
     "build:pwa:optim": "npm run-script clean:project && cross-env NODE_ENV=production webpack --env=pwa --progress --profile --colors && webpack --env=optim  --progress --profile --colors && cross-env JEKYLL_ENV=pwa bundle exec jekyll build && sw-precache --config=config/sw.config.js --verbose",
     "build": "npm run-script clean:project && cross-env NODE_ENV=production webpack --env=prod --progress --profile --colors && cross-env JEKYLL_ENV=production bundle exec jekyll build",
