@@ -4,25 +4,22 @@
 # You may also want to update /config/webpack.pwa.js in case you want to generate a Progressive Web App
 
 title: mailtolink | Code generator for mailto links
-email: your-email@example.com
+email: michael@mckvr.com
 description: A quick and easy code generator for mailto links
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
-theme_color: '#705AD9'
-twitter_username: sandochee
-github_username:  sandoche
-author: Sandoche Adittane
-logo: assets/images/large-logo.png
+url: "https://mailtolink.me" # the base hostname & protocol for your site, e.g. http://example.com
+theme_color: '#9eebcf'
+twitter_username: mmckvr
+github_username:  mckeever02
+author: Michael Mckeever
+logo: icon.png
 twitter:
   username: mmckvr
 social:
   name: Michael Mckeever
   links:
-    - https://twitter.com/sandochee
-    - https://www.facebook.com/sandoche
-    - https://www.linkedin.com/in/sandoche
-    - https://plus.google.com/+SandocheADITTANE
-    - https://github.com/sandoche
+    - https://twitter.com/mmckvr
+    - https://github.com/mckeever02
 
 languages: ["en"]
 ampdir: amp
