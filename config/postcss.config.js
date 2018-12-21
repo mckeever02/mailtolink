@@ -1,6 +1,6 @@
 const uncssConfig = {
   html: [
-    '_site/index.html',
+    '/index.html',
     // Your entire sitemap added manually
     // or some other way if you’re clever (wget is handy for this).
   ],
@@ -17,3 +17,4 @@ module.exports = ({ file, options, env }) => ({
     cssnano: env === 'production' ? {} : false,
   },
 });
+
