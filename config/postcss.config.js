@@ -1,6 +1,6 @@
 const uncssConfig = {
   html: [
-    '/index.html',
+    'http://mailtolink.me',
     // Your entire sitemap added manually
     // or some other way if you’re clever (wget is handy for this).
   ],
