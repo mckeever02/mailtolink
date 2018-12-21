@@ -203,6 +203,7 @@ textarea {
   resize: none;
 }
 
+/* uncss:ignore start */
 .mailto-link-container {
   visibility: hidden;
   bottom: 2rem;
@@ -215,6 +216,7 @@ textarea {
     transform: translateY(0);
   }
 }
+/* uncss:ignore end */
 
 .mailto-link {
   font-size: $font-size-6;
@@ -284,6 +286,7 @@ textarea {
 ::-moz-selection { background: $light-green; }
 ::selection { background: $light-green; }
 
+/* uncss:ignore start */
 .dark {
   body, input, textarea {
     color: $white;
@@ -358,4 +361,5 @@ textarea {
     }
   }
 }
+/* uncss:ignore end */
 

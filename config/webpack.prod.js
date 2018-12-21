@@ -2,9 +2,17 @@
 const Merge = require('webpack-merge');
 const CommonConfig = require('./webpack.common.js');
 const path = require('path');
+const glob = require('glob')
 const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const UnCSSPlugin = require('uncss-webpack-plugin'); 
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const PurgecssPlugin = require('purgecss-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
+
+const PATHS = {
+  src: path.join(__dirname, '_site')
+}
 
 module.exports = Merge(CommonConfig, {
   output: {
@@ -30,5 +38,11 @@ module.exports = Merge(CommonConfig, {
       comments: false,
     }),
     new ImageminPlugin({ test: /\.(jpe?g|png|gif|svg)$/i }),
+    // new PurgecssPlugin({
+    //   paths: glob.sync([
+    //     '/*.html'
+    //   ]),
+    //   paths: glob.sync(`${PATHS.src}/*`, { nodir: true })
+    // }),
   ],
 });

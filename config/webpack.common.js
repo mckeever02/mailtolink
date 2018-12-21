@@ -4,6 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin');
+const UnCSSPlugin = require('uncss-webpack-plugin'); 
 
 module.exports = {
   entry: {
@@ -18,6 +19,7 @@ module.exports = {
       filename: '../_layouts/default.html',
     }),
     new ExtractTextPlugin('[name].css'),
+    new UnCSSPlugin({ /* options */ }),
     new CopyWebpackPlugin([{
       from: path.resolve('_images'),
       to: 'images/',
