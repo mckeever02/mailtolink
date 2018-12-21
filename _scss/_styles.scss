@@ -35,6 +35,9 @@ html, body {
 body {
   padding-top: 8rem;
   overflow: hidden;
+  @media (min-width: 1921px ) {
+    padding-top: 14rem;
+  }
 }
 
 body, input, textarea {
@@ -68,10 +71,10 @@ body, input, textarea {
   height: 24px;
   transition: transform .3s ease;
   path:first-of-type {
-    fill: $white;
+    fill: $black;
   }
   path:last-of-type {
-    fill: $black;
+    fill: $white;
   }
   &:hover {
     transform: rotate(180deg);
@@ -80,10 +83,10 @@ body, input, textarea {
 
 .btn-mode-dark {
   path:first-of-type {
-    fill: $black;
+    fill: $white;
   }
   path:last-of-type {
-    fill: $white;
+    fill: $black;
   }
 }
 

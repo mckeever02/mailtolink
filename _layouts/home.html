@@ -12,7 +12,7 @@ layout: default
   
 </div>
 <div class="absolute top-0 right-0 pa3">
-  <button id="nav-light" class="button-reset bg-transparent b--none pa0 btn-mode" type="button">
+  <button id="nav-light" class="button-reset bg-transparent b--none pa0 btn-mode" type="button" aria-label="Click to toggle Dark/Light mode">
     <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
       <g fill="none" fill-rule="evenodd">
         <path d="M15 21h3v3H6v-3H3v-3H0V6h3V3h3V0h12v3h3v3h3v12h-3v3h-6zm3-3v3z" />
@@ -34,7 +34,7 @@ layout: default
   <div class="bg-white bb email-compose">
     <div class="flex flex-row relative items-center justify-center">
       <label for="recipient" class="f5 gray-40 fw6 pl2 pl3-ns">To:</label>
-      <input id="recipient" tabindex="1" name="recipient" class="input input-reset tagify pv3 h-100 db w-100 bg-transparent b--none pl2 pl3-ns f5"
+      <input id="recipient" name="recipient" class="input input-reset tagify pv3 h-100 db w-100 bg-transparent b--none pl2 pl3-ns f5"
         type="email" data-tag="yes">
       <div class="mr2 mr3-ns">
         <a class="f6 fw6 br2 ph2 tdn tc pv2 dib btn-sm ccButton" href="javascript:void(0);">Cc:</a>
@@ -46,25 +46,25 @@ layout: default
     <div class="dn ccSection">
       <div class="flex flex-row relative items-center justify-center">
         <label for="cc" class="f5 fw7 code gray-40 pl2 pl3-ns">Cc:</label>
-        <input id="cc" tabindex="2" name="cc" class="input input-reset pv3 h-100 db w-100 bg-transparent b--none pl2 pl3-ns f5"
+        <input id="cc" name="cc" class="input input-reset pv3 h-100 db w-100 bg-transparent b--none pl2 pl3-ns f5"
           type="text">
       </div>
     </div>
     <div class="dn bccSection">
       <div class="flex flex-row relative items-center justify-center">
         <label for="bcc" class="f5 fw7 code gray-40 pl2 pl3-ns">Bcc:</label>
-        <input id="bcc" tabindex="2" name="bcc" class="input input-reset pv3 h-100 db w-100 bg-transparent b--none pl2 pl3-ns f5"
+        <input id="bcc" name="bcc" class="input input-reset pv3 h-100 db w-100 bg-transparent b--none pl2 pl3-ns f5"
           type="text">
       </div>
     </div>
     <div class="b--black bw1 flex flex-row relative items-center justify-center">
       <label for="subject" class="f5 fw7 code gray-40 pl2 pl3-ns">Subject:</label>
-      <input id="subject" tabindex="2" name="subject" class="input input-reset pv3 h-100 db w-100 bg-transparent b--none pl2 pl3-ns f5"
+      <input id="subject" name="subject" class="input input-reset pv3 h-100 db w-100 bg-transparent b--none pl2 pl3-ns f5"
         type="text">
     </div>
   </div><!-- /bg-gray-10 -->
   
-  <textarea id="body" name="body" tabindex="3" class="pa3 input input-reset b--none h-100 w-100 email-body f5 lh-copy" placeholder="A quick and easy way to generate markup for mailto links. Just fill out the email and copy your generated code." id="body"></textarea>
+  <textarea aria-label="message" id="body" name="body" class="pa3 input input-reset b--none h-100 w-100 email-body f5 lh-copy" placeholder="A quick and easy way to generate markup for mailto links. Just fill out the email and copy your generated code." id="body"></textarea>
 
 </div>
 

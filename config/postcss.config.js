@@ -11,7 +11,7 @@ const uncssConfig = {
 module.exports = ({ file, options, env }) => ({
   parser: 'postcss-scss',
   plugins: {
-    'postcss-uncss': uncssConfig,
+    'postcss-uncss': env === 'production' ? uncssConfig : false,
     'postcss-import': {},
     autoprefixer: {},
     cssnano: env === 'production' ? {} : false,

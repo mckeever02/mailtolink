@@ -8,10 +8,7 @@ const ccSection = document.querySelector('.ccSection'),
     ccBtn = document.querySelector('.ccButton'),
     bccBtn = document.querySelector('.bccButton'),
     input = document.querySelectorAll('.input'),
-    modeBtn = document.querySelector('#modeBtn'),
-    body = document.querySelector('body'),
-    copyCode = document.querySelector('.copyCode'),
-    colorMode = window.localStorage.getItem('mode');
+    copyCode = document.querySelector('.copyCode');
     // recipient = document.getElementbyID('recipient');
 
 
@@ -50,7 +47,6 @@ for (let item of input) {
             } else {
                 link.classList.remove('active');
             }
-
         }
 
         if (id == 'recipient' || id == 'cc' || id == 'bcc') {

@@ -5,7 +5,7 @@
 
 title: mailtolink | Code generator for mailto links
 email: michael@mckvr.com
-description: A quick and easy code generator for mailto links
+description: A quick and easy way to generate markup for mailto links. Just fill out the email and copy your generated code.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://mailtolink.me" # the base hostname & protocol for your site, e.g. http://example.com
 theme_color: '#9eebcf'
