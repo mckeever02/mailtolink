@@ -33,8 +33,11 @@ html, body {
 }
 
 body {
-  padding-top: 8rem;
+  padding-top: 5rem;
   overflow: hidden;
+  @media #{$breakpoint-not-small} {
+    padding-top: 8rem;
+  }
   @media (min-width: 1921px ) {
     padding-top: 14rem;
   }
@@ -126,13 +129,16 @@ body, input, textarea {
 .btn-sm {
   border: 1px solid $gray-30;
   color: $gray-40;
-  width: 60px;
+  width: 50px;
   text-decoration: none;
   transition: all .1s ease;
   &:hover {
     background-color: $near-black;
     color: $white;
     border-color: $near-black;
+  }
+  @media #{$breakpoint-not-small} {
+    width: 60px;
   }
 }
 
@@ -145,20 +151,24 @@ body, input, textarea {
   animation: .3s ease 0s 1 slideIn;
   animation-fill-mode: forwards;
   transition: background-color $mode-timing ease;
-  &:before {
-    content: "";
-    width: 100%;
-    height: 100%;
-    background-color: $near-black;
-    position: absolute;
-    top: 1.5rem;
-    right: -1em;
-    z-index: -1;
-    border-radius: $border-radius-3;
+  
+  @media #{$breakpoint-not-small} {
+    &:before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      background-color: $near-black;
+      position: absolute;
+      top: 1.5rem;
+      right: -1em;
+      z-index: -1;
+      border-radius: $border-radius-3;
+    }
   }
   @media (min-width: 1921px ) {
     max-width: 86rem;
   }
+  
 }
 
 .email-header {
@@ -173,14 +183,21 @@ body, input, textarea {
 }
 
 .app-circle, .app-square, .app-triangle {
-  margin-right: 8px;
+  margin-right: 6px;
   transition: background-color $mode-timing ease;
+  @media #{$breakpoint-not-small} {
+    margin-right: 8px;
+  }
 }
 
 .app-circle, .app-square {
-  width: 11.7px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   background-color: $black;
+  @media #{$breakpoint-not-small} {
+    width: 12px;
+    height: 12px;
+  }
 }
 
 .app-circle {
@@ -190,10 +207,15 @@ body, input, textarea {
 .app-triangle {
   width: 0; 
   height: 0; 
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
-  border-bottom: 12px solid $black;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 10px solid $black;
   transition: border-color $mode-timing ease;
+  @media #{$breakpoint-not-small} {
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 12px solid $black;
+  }
 }
 
 input, textarea {
@@ -277,10 +299,14 @@ textarea {
 .bg-tile {
   background-image: url('/assets/images/tile.svg');
   background-repeat: repeat;
-  background-size: 15%;
-  background-position: -3px -3px;
+  background-size: 60%;
+  background-position: -3px -45%;
   background-color: $light-green;
   transition: all $mode-timing ease;
+  @media #{$breakpoint-not-small} {
+    background-size: 15%;
+    background-position: -3px -3px;
+  }
   @media (min-width:  1921px) {
     background-size: 10%;
   }
@@ -322,9 +348,6 @@ textarea {
   .btn-sm {
     border: 1px solid darken($black, 10%);
     color: $gray-40;
-    width: 60px;
-    text-decoration: none;
-    transition: all .1s ease;
     &:hover {
       background-color: $white;
       color: $near-black;

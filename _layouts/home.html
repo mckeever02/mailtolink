@@ -1,5 +1,6 @@
 ---
 layout: default
+title: mailtolink | Code generator for mailto links
 ---
 
 <div class="absolute top-0 left-0 pa3">
@@ -33,38 +34,38 @@ layout: default
   </div>
   <div class="bg-white bb email-compose">
     <div class="flex flex-row relative items-center justify-center">
-      <label for="recipient" class="f5 gray-40 fw6 pl2 pl3-ns">To:</label>
+      <label for="recipient" class="f5-ns f6 gray-40 fw6 pl2 pl3-ns">To:</label>
       <input id="recipient" name="recipient" class="input input-reset tagify pv3 h-100 db w-100 bg-transparent b--none pl2 pl3-ns f5"
         type="email" data-tag="yes">
       <div class="mr2 mr3-ns">
-        <a class="f6 fw6 br2 ph2 tdn tc pv2 dib btn-sm ccButton" href="javascript:void(0);">Cc:</a>
+        <a class="f5-ns f6 fw6 br2 ph2 tdn tc pv2 dib btn-sm ccButton" href="javascript:void(0);">Cc:</a>
       </div>
       <div class="mr2 mr3-ns">
-        <a class="f6 fw6 br2 ph2 tdn tc pv2 dib btn-sm bccButton" href="javascript:void(0);">Bcc:</a>
+        <a class="f5-ns f6 fw6 br2 ph2 tdn tc pv2 dib btn-sm bccButton" href="javascript:void(0);">Bcc:</a>
       </div>
     </div>
     <div class="dn ccSection">
       <div class="flex flex-row relative items-center justify-center">
-        <label for="cc" class="f5 fw7 code gray-40 pl2 pl3-ns">Cc:</label>
+        <label for="cc" class="f5-ns f6 fw7 code gray-40 pl2 pl3-ns">Cc:</label>
         <input id="cc" name="cc" class="input input-reset pv3 h-100 db w-100 bg-transparent b--none pl2 pl3-ns f5"
           type="text">
       </div>
     </div>
     <div class="dn bccSection">
       <div class="flex flex-row relative items-center justify-center">
-        <label for="bcc" class="f5 fw7 code gray-40 pl2 pl3-ns">Bcc:</label>
+        <label for="bcc" class="f5-ns f6 fw7 code gray-40 pl2 pl3-ns">Bcc:</label>
         <input id="bcc" name="bcc" class="input input-reset pv3 h-100 db w-100 bg-transparent b--none pl2 pl3-ns f5"
           type="text">
       </div>
     </div>
     <div class="b--black bw1 flex flex-row relative items-center justify-center">
-      <label for="subject" class="f5 fw7 code gray-40 pl2 pl3-ns">Subject:</label>
+      <label for="subject" class="f5-ns f6 fw7 code gray-40 pl2 pl3-ns">Subject:</label>
       <input id="subject" name="subject" class="input input-reset pv3 h-100 db w-100 bg-transparent b--none pl2 pl3-ns f5"
         type="text">
     </div>
   </div><!-- /bg-gray-10 -->
   
-  <textarea aria-label="message" id="body" name="body" class="pa3 input input-reset b--none h-100 w-100 email-body f5 lh-copy" placeholder="A quick and easy way to generate markup for mailto links. Just fill out the email and copy your generated code." id="body"></textarea>
+  <textarea aria-label="message" id="body" name="body" class="pa2 pa3-ns input input-reset b--none h-100 w-100 email-body f5-ns f6 lh-copy" placeholder="A quick and easy way to generate markup for mailto links. Just fill out the email and copy your generated code." id="body"></textarea>
 
 </div>
 
