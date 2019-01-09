@@ -1,4 +1,4 @@
 [build]
   publish = "_site/"
   # command = "npm run build:pwa:optim"
-  command = "npm run build"
+  command = "npm run build:pwa:optim"
