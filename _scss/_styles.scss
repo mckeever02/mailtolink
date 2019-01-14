@@ -48,11 +48,11 @@
 
 html, body {
     background-color: $black;
+    overflow: hidden;
 }
 
 body {
   padding-top: 5rem;
-  overflow: hidden;
   @media #{$breakpoint-not-small} {
     padding-top: 9.5rem;
   }
