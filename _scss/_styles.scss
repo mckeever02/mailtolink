@@ -24,6 +24,24 @@
   }
 }
 
+@keyframes slideIn1 {
+  0% {
+    transform: translateY(12px);
+  }
+  100% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes slideIn2 {
+  0% {
+    transform: translateY(12px);
+  }
+  100% {
+    transform: translateY(-12px);
+  }
+}
+
 .label {
   display: none;
 }
@@ -36,7 +54,7 @@ body {
   padding-top: 5rem;
   overflow: hidden;
   @media #{$breakpoint-not-small} {
-    padding-top: 8rem;
+    padding-top: 9.5rem;
   }
   @media (min-width: 1921px ) {
     padding-top: 14rem;
@@ -70,8 +88,8 @@ body, input, textarea {
 }
 
 .btn-mode {
-  width: 24px;
-  height: 24px;
+  width: 18px;
+  height: 18px;
   transition: transform .3s ease;
   path:first-of-type {
     fill: $black;
@@ -81,6 +99,13 @@ body, input, textarea {
   }
   &:hover {
     transform: rotate(180deg);
+  }
+  &:focus {
+    outline: none;
+  }
+  @media #{$breakpoint-not-small} {
+    width: 20px;
+    height: 20px;
   }
 }
 
@@ -93,38 +118,38 @@ body, input, textarea {
   }
 }
 
-.gh-button {
-  color: $near-black;
-  &:hover {
-    .tooltip {
-      transform: translateX(0);
-      visibility: visible;
-      opacity: 1;
-    }
-  }
-}
+// .gh-button {
+//   color: $near-black;
+//   &:hover {
+//     .tooltip {
+//       transform: translateX(0);
+//       visibility: visible;
+//       opacity: 1;
+//     }
+//   }
+// }
 
-.tooltip {
-  color: $white;
-  transition: all $mode-timing ease;
-  background-color: $near-black;
-  font-size: $font-size-7;
-  border-radius: $border-radius-2;
-  visibility: hidden;
-  opacity: 0;
-  transform: translateX(-5px);
-  &:before {
-    content: "";
-    position: absolute;
-    left: -4px;
-    top: calc(50% - 4px);
-    width: 0; 
-    height: 0; 
-    border-top:  4px solid transparent;
-    border-bottom:  4px solid transparent; 
-    border-right: 4px solid $black;
-  }
-}
+// .tooltip {
+//   color: $white;
+//   transition: all $mode-timing ease;
+//   background-color: $near-black;
+//   font-size: $font-size-7;
+//   border-radius: $border-radius-2;
+//   visibility: hidden;
+//   opacity: 0;
+//   transform: translateX(-5px);
+//   &:before {
+//     content: "";
+//     position: absolute;
+//     left: -4px;
+//     top: calc(50% - 4px);
+//     width: 0; 
+//     height: 0; 
+//     border-top:  4px solid transparent;
+//     border-bottom:  4px solid transparent; 
+//     border-right: 4px solid $black;
+//   }
+// }
 
 .btn-sm {
   border: 1px solid $gray-30;
@@ -144,77 +169,75 @@ body, input, textarea {
 
 .email-window {
   max-width: 67rem;
-  background-color: $white;
+  border: 1px solid $border-color;
+  border-top: 0;
   position: relative;
+  border-radius: 0;
   z-index: 99;
   min-height: 95vh;
   animation: .3s ease 0s 1 slideIn;
   animation-fill-mode: forwards;
   transition: background-color $mode-timing ease;
-  
+
+  &:before, &:after {
+    content: "";
+    height: 100%;
+    border: 1px solid $border-color;
+    position: absolute;
+  }
+  &:before {
+    width: calc(100% - 12px);
+    animation: .3s ease 0s 1 slideIn1;
+    animation-delay: .3s;
+    animation-fill-mode: forwards;
+    height: 100%;
+    top: 0;
+    left: 6px;
+    z-index: -1;
+  }
   @media #{$breakpoint-not-small} {
-    &:before {
-      content: "";
-      width: 100%;
+    &:after {
+      animation: .3s ease 0s 1 slideIn2;
+      animation-delay: .5s;
+      animation-fill-mode: forwards;
+      width: calc(100% - 24px);
       height: 100%;
-      background-color: $near-black;
-      position: absolute;
-      top: 1.5rem;
-      right: -1em;
-      z-index: -1;
-      border-radius: $border-radius-3;
+      top: 0;
+      left: 12px;
+      z-index: -2;
     }
   }
   @media (min-width: 1921px ) {
     max-width: 86rem;
   }
-  
+}
+
+.email-window, .email-header, .email-compose, .email-body, .email-window:before, .email-window:after  {
+  background-color: $white;
 }
 
 .email-header {
-  border-bottom: 1px solid $gray-20;
-  background-color: $white;
+  border-bottom: 1px solid $border-color;
+  border-top: 1px solid $border-color;
   transition: all $mode-timing ease;
 }
 
 .email-compose {
-  border-color: $gray-20;
+  border-color: $border-color;
   transition: all $mode-timing ease;
 }
 
-.app-circle, .app-square, .app-triangle {
-  margin-right: 6px;
+.app-circle {
+  background-color: $gray-30;
   transition: background-color $mode-timing ease;
-  @media #{$breakpoint-not-small} {
-    margin-right: 8px;
-  }
-}
-
-.app-circle, .app-square {
   width: 10px;
   height: 10px;
-  background-color: $black;
-  @media #{$breakpoint-not-small} {
-    width: 12px;
-    height: 12px;
-  }
-}
-
-.app-circle {
   border-radius: 9999px;
-}
-
-.app-triangle {
-  width: 0; 
-  height: 0; 
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  border-bottom: 10px solid $black;
-  transition: border-color $mode-timing ease;
+  margin-right: 3px;
   @media #{$breakpoint-not-small} {
-    border-left: 6px solid transparent;
-    border-right: 6px solid transparent;
-    border-bottom: 12px solid $black;
+    margin-right: 8px;
+     width: 12px;
+    height: 12px;
   }
 }
 
@@ -301,8 +324,8 @@ textarea {
   background-repeat: repeat;
   background-size: 60%;
   background-position: -3px -45%;
-  background-color: $light-green;
-  transition: all $mode-timing ease;
+  background-color: $lighter-green;
+  transition: background-color $mode-timing ease;
   @media #{$breakpoint-not-small} {
     background-size: 15%;
     background-position: -3px -3px;
@@ -312,8 +335,8 @@ textarea {
   }
 }
 
-::-moz-selection { background: $light-green; }
-::selection { background: $light-green; }
+::-moz-selection { background: $light-green; color: $black; }
+::selection { background: $light-green; color: $black;}
 
 /* uncss:ignore start */
 .dark {
@@ -321,24 +344,15 @@ textarea {
     color: $white;
   }
   &.bg-tile {
-     background-image: url('/assets/images/tile-dark.svg');
+    background-image: url('/assets/images/tile-dark.svg');
     background-color: $black;
   }
-  .email-window, .email-header, .email-compose, .email-body  {
+  .email-window, .email-header, .email-compose, .email-body, .email-window:before, .email-window:after  {
     background-color: lighten($black, 3%);
     border-color: darken($black, 20%);
-    &:before {
-      background-color: $white;
-    }
   }
   .email-header {
     color: $white;
-  }
-  .app-circle, .app-square {
-    background-color: $gray-40;
-  }
-  .app-triangle {
-    border-bottom-color: $gray-40!important;
   }
   .mailto-link {
     background-color: $white;

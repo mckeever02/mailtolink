@@ -96,7 +96,7 @@ $black-0125: rgba(0,0,0,.0125) !default;
 
 $gray-40: #A09EA4 !default;
 $gray-30: #D5D5D5 !default;
-$gray-20: #E7E7E7 !default;
+$gray-20: #F3F6F8 !default;
 $gray-10: #F4F4F4 !default;
 
 $white-90: rgba(255,255,255,.9) !default;
@@ -128,7 +128,8 @@ $pink: #ff80cc !default;
 $light-pink: #ffa3d7 !default;
 $dark-green: #137752 !default;
 $green: #24C339 !default;
-$light-green: #9eebcf !default;
+$light-green: #64EBCD !default;
+$lighter-green: #EFFCF9 !default;
 $navy: #001b44 !default;
 $dark-blue: #00449e !default;
 $blue: #0083FF !default;
@@ -146,6 +147,9 @@ $breakpoint-medium: 'screen and (min-width: 30em) and (max-width: 60em)' !defaul
 $breakpoint-large: 'screen and (min-width: 60em)' !default;
 
 $mode-timing: .2s;
+
+$border-color: $gray-30 !default;
+
 
 /*
 

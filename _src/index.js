@@ -155,22 +155,22 @@ clipboard.on('success', function (e, el) {
     });
 });
 
-var user = 'mckeever02';
-var repo = 'mailtolink';
+// var user = 'mckeever02';
+// var repo = 'mailtolink';
 
-// get data
-var callbackName = 'ghButtonCallback' + Math.floor(Math.random() * 10000);
-var button = document.querySelector('.gh-button');
+// // get data
+// var callbackName = 'ghButtonCallback' + Math.floor(Math.random() * 10000);
+// var button = document.querySelector('.gh-button');
 
-window[callbackName] = function (response) {
-    var starText = addCommas(response.data.stargazers_count);
-    button.querySelector('.gh-button__stat__text').textContent = starText;
-}
+// window[callbackName] = function (response) {
+//     var starText = addCommas(response.data.stargazers_count);
+//     button.querySelector('.gh-button__stat__text').textContent = starText;
+// }
 
-function addCommas(num) {
-    return new String(num).replace(/(\d)(?=(\d{3})+$)/g, '$1,');
-}
+// function addCommas(num) {
+//     return new String(num).replace(/(\d)(?=(\d{3})+$)/g, '$1,');
+// }
 
-var script = document.createElement('script');
-script.src = 'https://api.github.com/repos/' + user + '/' + repo + '?callback=' + callbackName;
-document.head.appendChild(script);
+// var script = document.createElement('script');
+// script.src = 'https://api.github.com/repos/' + user + '/' + repo + '?callback=' + callbackName;
+// document.head.appendChild(script);
