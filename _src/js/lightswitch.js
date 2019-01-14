@@ -31,13 +31,11 @@ var btn = document.getElementById("nav-light");
 // Change to dark and rotate the switch icon
 function darkmode() {
   document.body.classList.replace('light', 'dark');
-  btn.classList.add('btn-mode-dark');
 }
 
 // Change to light and rotate the switch icon
 function lightmode() {
   document.body.classList.replace('dark', 'light');
-  btn.classList.remove('btn-mode-dark');
 }
 
 // Initialization triggers light/dark mode based on prior preference, then OS setting

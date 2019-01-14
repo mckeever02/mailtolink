@@ -109,14 +109,14 @@ body, input, textarea {
   }
 }
 
-.btn-mode-dark {
-  path:first-of-type {
-    fill: $white;
-  }
-  path:last-of-type {
-    fill: $black;
-  }
-}
+// .btn-mode-dark {
+//   path:first-of-type {
+//     fill: $white;
+//   }
+//   path:last-of-type {
+//     fill: $black;
+//   }
+// }
 
 // .gh-button {
 //   color: $near-black;
@@ -366,6 +366,14 @@ textarea {
       background-color: $white;
       color: $near-black;
       border-color: $white;
+    }
+  }
+  .btn-mode {
+    path:first-of-type {
+      fill: $white;
+    }
+    path:last-of-type {
+      fill: $black;
     }
   }
   .email-body {
