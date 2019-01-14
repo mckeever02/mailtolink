@@ -47,11 +47,14 @@
 }
 
 html, body {
-    background-color: $black;
+  height: 100%;
+}
+
+html, body, .main {
     overflow: hidden;
 }
 
-body {
+.main {
   padding-top: 5rem;
   @media #{$breakpoint-not-small} {
     padding-top: 9.5rem;
@@ -174,18 +177,15 @@ body, input, textarea {
   position: relative;
   border-radius: 0;
   z-index: 99;
-  min-height: 95vh;
+  min-height: 80vh;
   animation: .3s ease 0s 1 slideIn;
   animation-fill-mode: forwards;
   transition: background-color $mode-timing ease;
-
-  &:before, &:after {
+  &:before {
     content: "";
     height: 100%;
     border: 1px solid $border-color;
     position: absolute;
-  }
-  &:before {
     width: calc(100% - 12px);
     animation: .3s ease 0s 1 slideIn1;
     animation-delay: .3s;
@@ -196,6 +196,13 @@ body, input, textarea {
     z-index: -1;
   }
   @media #{$breakpoint-not-small} {
+
+    &:before, &:after {
+      content: "";
+      height: 100%;
+      border: 1px solid $border-color;
+      position: absolute;
+    }
     &:after {
       animation: .3s ease 0s 1 slideIn2;
       animation-delay: .5s;
@@ -254,14 +261,24 @@ textarea {
 /* uncss:ignore start */
 .mailto-link-container {
   visibility: hidden;
+  height: 0;
+  width: 0;
   bottom: 2rem;
   transform: translateY(8rem);
-  transition: .2s ease;
+  transition: transform .2s ease;
   margin: auto;
   z-index: 200;
+  .mailto-link {
+    display: none;
+  }
   &.active {
     visibility: visible;
+    height: auto;
+    width: 100%;
     transform: translateY(0);
+    .mailto-link {
+      display: flex;
+    }
   }
 }
 /* uncss:ignore end */
@@ -317,7 +334,8 @@ textarea {
   line-height: 40px;
   padding-left: 1rem;
   padding-right: 1rem;
-  width: 160px;
+  // width: 160px;
+  white-space: nowrap;
 }
 .bg-tile {
   background-image: url('/assets/images/tile.svg');
@@ -335,8 +353,8 @@ textarea {
   }
 }
 
-::-moz-selection { background: $light-green; color: $black; }
-::selection { background: $light-green; color: $black;}
+::-moz-selection { background: $light-green; color: $white; }
+::selection { background: $light-green; color: $white;}
 
 /* uncss:ignore start */
 .dark {
