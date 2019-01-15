@@ -50,7 +50,7 @@ html, body {
   height: 100%;
 }
 
-html, body, .main {
+html, body {
     overflow: hidden;
 }
 
@@ -73,6 +73,7 @@ body, input, textarea {
   background-color: $white;
   transition: all $mode-timing ease;
   height: 100%;
+  //max-height: 58.5vh;
   &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
     color: $black;
   }

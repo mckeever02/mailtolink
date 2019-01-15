@@ -9,12 +9,7 @@ const ccSection = document.querySelector('.ccSection'),
     bccBtn = document.querySelector('.bccButton'),
     input = document.querySelectorAll('.input'),
     copyCode = document.querySelector('.copyCode');
-    // recipient = document.getElementbyID('recipient');
 
-
-// recipient.addEventListener('keydown', (e) => {
-
-// });
 
 for (let item of input) {
     item.addEventListener('keyup', (e) => {
@@ -38,7 +33,7 @@ for (let item of input) {
             }
         }
 
-        //if there's a comma in recipient then remove the space after it
+        //Show email address when email field has 3 chars or more, hide if not
         if (id == 'recipient') {
             link.classList.add('active');
 
@@ -48,7 +43,8 @@ for (let item of input) {
                 link.classList.remove('active');
             }
         }
-
+        
+        //if email field and comma, then remove space after it in output
         if (id == 'recipient' || id == 'cc' || id == 'bcc') {
             if (comma.test(value)) {
                 let str = output.innerHTML;
@@ -59,6 +55,7 @@ for (let item of input) {
             }
         }
 
+        //if subject or body, replace spaces and line breaks
         if (id == 'subject' || id == 'body') {
             let str = output.innerHTML;
             str = str.replace(/\n/g, "%0A");
@@ -139,12 +136,6 @@ copyCode.addEventListener("click", function (e) {
 });
 
 clipboard.on('success', function (e, el) {
-    //document.getElementById('copy').innerHTML = 'Copied';
-    // console.info('Action:', e.action);
-    //     console.info('Text:', e.text);
-    //     console.info('Trigger:', e.trigger);
-    //e.clearSelection();
-    //console.log(e.trigger.innerHTML);
     var elems = document.getElementsByClassName('copyCode');
     e.trigger.innerHTML = 'Copied!'
 
@@ -154,23 +145,3 @@ clipboard.on('success', function (e, el) {
         }
     });
 });
-
-// var user = 'mckeever02';
-// var repo = 'mailtolink';
-
-// // get data
-// var callbackName = 'ghButtonCallback' + Math.floor(Math.random() * 10000);
-// var button = document.querySelector('.gh-button');
-
-// window[callbackName] = function (response) {
-//     var starText = addCommas(response.data.stargazers_count);
-//     button.querySelector('.gh-button__stat__text').textContent = starText;
-// }
-
-// function addCommas(num) {
-//     return new String(num).replace(/(\d)(?=(\d{3})+$)/g, '$1,');
-// }
-
-// var script = document.createElement('script');
-// script.src = 'https://api.github.com/repos/' + user + '/' + repo + '?callback=' + callbackName;
-// document.head.appendChild(script);

@@ -19,7 +19,7 @@ title: mailtolink | Code generator for mailto links
   </button>
 </div>
 
-<div class="w-90 center email-window">
+<div class="w-90 center email-window h-100 flex flex-column">
   <div class="pv3 ph2 ph3-ns flex justify-center items-center w-100 tc relative email-header">
     <div class="absolute left-0 flex flex-row pl2 pl3-ns h-100 justify-between items-center">
       <div class="app-circle dib"></div>
@@ -60,11 +60,9 @@ title: mailtolink | Code generator for mailto links
         type="text">
     </div>
   </div><!-- /bg-gray-10 -->
-  <div class="h-100 w-100 email-body">
-    <textarea aria-label="message" id="body" name="body" class="bg-transparent w-100 h-100 pa2 pa3-ns input input-reset b--none f5-ns f6 lh-copy"
+  <textarea aria-label="message" id="body" name="body" class="email-body w-100 pa2 pa3-ns input input-reset b--none f5-ns f6 lh-copy"
         placeholder="A simple markup generator for mailto links that takes care of the formatting for you. Just fill out the email and copy your code."
         id="body"></textarea>
-  </div>
 </div>
 
 <div class="absolute mailto-link-container w-100 flex justify-center ph2">
