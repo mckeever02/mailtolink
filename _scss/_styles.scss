@@ -73,18 +73,22 @@ body, input, textarea {
   background-color: $white;
   transition: all $mode-timing ease;
   height: 100%;
-  //max-height: 58.5vh;
-  &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-    color: $gray;
-  }
-  &::-moz-placeholder { /* Firefox 19+ */
-    color: $gray;
-  }
-  &:-ms-input-placeholder { /* IE 10+ */
-    color: $gray;
-  }
-  &:-moz-placeholder { /* Firefox 18- */
-    color: $gray;
+  overflow:hidden;
+  textarea {
+    height: 95%;
+    //max-height: 58.5vh;
+    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+      color: $gray;
+    }
+    &::-moz-placeholder { /* Firefox 19+ */
+      color: $gray;
+    }
+    &:-ms-input-placeholder { /* IE 10+ */
+      color: $gray;
+    }
+    &:-moz-placeholder { /* Firefox 18- */
+      color: $gray;
+    }
   }
   @media (min-width: 1921px ) {
     min-height: 70vh;
