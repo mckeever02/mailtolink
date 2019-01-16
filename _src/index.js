@@ -21,7 +21,7 @@ for (let item of input) {
             comma = new RegExp(',');
         console.log(output, id, label, value);
 
-        output.innerHTML = value;
+        output.innerText = value;
 
         //If not recipient input then show adjoining label when value over 1 else hide
         if (id != 'recipient') {
@@ -57,10 +57,11 @@ for (let item of input) {
 
         //if subject or body, replace spaces and line breaks
         if (id == 'subject' || id == 'body') {
-            let str = output.innerHTML;
-            str = str.replace(/\n/g, "%0A");
-            str = str.replace(/ /g, "%20");
-            output.innerHTML = str;
+            let str = output.innerText;
+            //console.log(str);
+            str = encodeURIComponent(str);
+            // str = str.replace(/\n/g, "%0A").replace(/ /g, "%20").replace(/&/g, "%26");
+            output.innerText = str;
         }
 
     });
