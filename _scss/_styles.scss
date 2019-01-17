@@ -201,7 +201,6 @@ body, input, textarea {
     z-index: -1;
   }
   @media #{$breakpoint-not-small} {
-
     &:before, &:after {
       content: "";
       height: 100%;
@@ -434,3 +433,19 @@ textarea {
 }
 /* uncss:ignore end */
 
+@media (prefers-reduced-motion: reduce) {
+  *, *:before, *:after {
+    animation: none !important;
+    transition: none !important;
+  }
+  .email-window {
+    &:before {
+      content: "";
+      top: -6px;
+    }
+    &:after {
+      content: "";
+      top: -12px;
+    }
+  }
+}
