@@ -33,8 +33,8 @@ for (let item of input) {
             }
         }
 
-        //Show email address when email field has 3 chars or more, hide if not
-        if (id == 'recipient') {
+        //Show email address when email field has 3 chars or more, hide if not.         
+        if (id == 'recipient' || id == 'cc' || id == 'bcc') {
             link.classList.add('active');
 
             if (value.length >= 3) {
@@ -42,10 +42,8 @@ for (let item of input) {
             } else {
                 link.classList.remove('active');
             }
-        }
-        
-        //if email field and comma, then remove space after it in output
-        if (id == 'recipient' || id == 'cc' || id == 'bcc') {
+            
+            //if email field and comma, then remove space after it in output
             if (comma.test(value)) {
                 let str = output.innerHTML;
                 str = str.replace(/\s+/g, '');
@@ -54,6 +52,7 @@ for (let item of input) {
                 output.innerHTML = value;
             }
         }
+        
 
         //if subject or body, replace spaces and line breaks
         if (id == 'subject' || id == 'body') {
@@ -128,7 +127,6 @@ copyCode.addEventListener("click", function (e) {
     }
 
     let mailtoText = document.querySelector('.mailto-text').innerText;
-
 
     mailtoText = mailtoText.replace(/\n/g, "%0A");
 
