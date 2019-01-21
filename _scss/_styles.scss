@@ -165,6 +165,13 @@ body, input, textarea {
   }
 }
 
+.link {
+  color: $black;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 .email-window {
   max-width: 67rem;
   border: 1px solid $border-color;
@@ -355,6 +362,9 @@ textarea {
 /* uncss:ignore start */
 .dark {
   body, input, textarea {
+    color: $white;
+  }
+  .link {
     color: $white;
   }
   &.bg-tile {
