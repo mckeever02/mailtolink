@@ -132,7 +132,7 @@ copyCode.addEventListener("click", function (e) {
 
     mailtoText = mailtoText.replace(/\n/g, "%0A");
 
-    console.log(`Spaces gone?:: ${mailtoText}`);
+    // console.log(`Spaces gone?:: ${mailtoText}`);
 
 });
 

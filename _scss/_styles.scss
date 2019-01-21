@@ -54,16 +54,6 @@ html, body {
     overflow: hidden;
 }
 
-.main {
-  padding-top: 5rem;
-  @media #{$breakpoint-not-small} {
-    padding-top: 9.5rem;
-  }
-  @media (min-width: 1921px ) {
-    padding-top: 14rem;
-  }
-}
-
 body, input, textarea {
   font-family: 'IBM Plex Mono', sans-serif;
   font-style: normal;
@@ -186,6 +176,7 @@ body, input, textarea {
   animation: .3s ease 0s 1 slideIn;
   animation-fill-mode: forwards;
   transition: background-color $mode-timing ease;
+  margin-top: 5rem;
   &:before {
     content: "";
     height: 100%;
@@ -201,6 +192,7 @@ body, input, textarea {
     z-index: -1;
   }
   @media #{$breakpoint-not-small} {
+    margin-top: 9.5rem;
     &:before, &:after {
       content: "";
       height: 100%;
@@ -220,6 +212,7 @@ body, input, textarea {
   }
   @media (min-width: 1921px ) {
     max-width: 86rem;
+    margin-top: 14rem;
   }
 }
 
