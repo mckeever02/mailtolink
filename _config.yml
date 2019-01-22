@@ -3,9 +3,9 @@
 # This config file contains the config of your webpages
 # You may also want to update /config/webpack.pwa.js in case you want to generate a Progressive Web App
 
-title: mailtolink.me | markup generator for mailto links
+title: mailtolink.me | mailto link generator
 email: michael@mckvr.com
-description: A quick and easy way to generate markup for those annoying mailto links.
+description: mailto link code and markup generator with subject, body, cc and bcc. Quickly and easily generate code for those annoying mailto links.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://mailtolink.me" # the base hostname & protocol for your site, e.g. http://example.com
 theme_color: '#9eebcf'
