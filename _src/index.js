@@ -59,7 +59,6 @@ for (let item of input) {
         //if subject or body, replace spaces and line breaks
         if (id == 'subject' || id == 'body') {
             let str = output.innerText;
-            let strBreak = "%0A";
             //console.log(str);
             let newStr = encodeURIComponent(str).replace(/%0A/g, '%0D%0A');
             // str = str.replace(/\n/g, '%0d%0a')
