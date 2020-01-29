@@ -59,10 +59,12 @@ for (let item of input) {
         //if subject or body, replace spaces and line breaks
         if (id == 'subject' || id == 'body') {
             let str = output.innerText;
+            let strBreak = "%0A";
             //console.log(str);
-            str = encodeURIComponent(str);
+            let newStr = encodeURIComponent(str).replace(/%0A/g, '%0D%0A');
+            // str = str.replace(/\n/g, '%0d%0a')
             // str = str.replace(/\n/g, "%0A").replace(/ /g, "%20").replace(/&/g, "%26");
-            output.innerText = str;
+            output.innerText = newStr;
         }
 
     });
@@ -109,7 +111,7 @@ copyCode.addEventListener("click", function (e) {
         labelCount = labelVisible.length;
 
 
-        //console.log(labelCount);
+    //console.log(labelCount);
 
     for (let item of labelVisible) {
         if (item.innerHTML.indexOf('&') === -1) {
@@ -128,9 +130,9 @@ copyCode.addEventListener("click", function (e) {
         }
     }
 
-    let mailtoText = document.querySelector('.mailto-text').innerText;
+    // let mailtoText = document.querySelector('.mailto-text').innerText.replace("%0A", "%0D%0A");
 
-    mailtoText = mailtoText.replace(/\n/g, "%0A");
+    // mailtoText = mailtoText.replace("%0A", "%0D%0A");
 
     // console.log(`Spaces gone?:: ${mailtoText}`);
 
