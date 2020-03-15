@@ -47,7 +47,7 @@ for (let item of input) {
         }
 
         //Show email address when email field has 3 chars or more, hide if not.
-        if (id == 'recipient') {
+        if (id == 'recipient' || id == 'cc' || id == 'bcc') {
             if (value.length >= 3) {
                 link.classList.add('active');
             } else {
