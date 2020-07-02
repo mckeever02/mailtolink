@@ -1,4 +1,3 @@
 [build]
-  publish = "_site/"
-  # command = "npm run build:pwa:optim"
-  command = "npm run build:pwa:optim"
+  publish = "dist/"
+  command = "npm run build"
