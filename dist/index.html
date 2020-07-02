@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Mailto link code and markup generator with subject, body, cc and bcc. Quickly and easily generate code for those annoying mailto links.">
+  <title>Mailtolink.me | The Mailto Link Generator</title>
+
+  <meta name="theme-color" content="#9eebcf">
+  <meta name="msapplication-navbutton-color" content="#9eebcf">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#9eebcf">
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta property="twitter:site" content="@mmckvr" />
+  <meta property="og:title" content="Mailtolink.me | The Mailto Link Generator" />
+  <meta property="og:description" content="Mailto link code and markup generator with subject, body, cc and bcc. Quickly and easily generate code for those annoying mailto links." />
+  <meta property="og:image" content="https://mailtolink.me/images/card-image.png" />
+  <meta name="google-site-verification" content="Jff4_DD2kU7Y8I7ITykHV_aXZKwATMqPTswzMZzZLTM" />
+
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,600" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/index.css">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="manifest" href="/images/site.webmanifest">
+  <link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+  <script>
+  (function (a, b, c) {
+    var d = a.history, e = document, f = navigator || {}, g = localStorage,
+    h = encodeURIComponent, i = d.pushState, k = function () { return Math.random().toString(36) },
+    l = function () { return g.cid || (g.cid = k()), g.cid }, m = function (r) {
+      var s = []; for (var t in r)
+        r.hasOwnProperty(t) && void 0 !== r[t] && s.push(h(t) + "=" + h(r[t])); return s.join("&")
+    },
+    n = function (r, s, t, u, v, w, x) {
+      var z = "https://www.google-analytics.com/collect",
+      A = m({
+        v: "1", ds: "web", aip: c.anonymizeIp ? 1 : void 0, tid: b, cid: l(), t: r || "pageview",
+        sd: c.colorDepth && screen.colorDepth ? screen.colorDepth + "-bits" : void 0, dr: e.referrer ||
+          void 0, dt: e.title, dl: e.location.origin + e.location.pathname + e.location.search, ul: c.language ?
+            (f.language || "").toLowerCase() : void 0, de: c.characterSet ? e.characterSet : void 0,
+        sr: c.screenSize ? (a.screen || {}).width + "x" + (a.screen || {}).height : void 0, vp: c.screenSize &&
+          a.visualViewport ? (a.visualViewport || {}).width + "x" + (a.visualViewport || {}).height : void 0,
+        ec: s || void 0, ea: t || void 0, el: u || void 0, ev: v || void 0, exd: w || void 0, exf: "undefined" != typeof x &&
+          !1 == !!x ? 0 : void 0
+      }); if (f.sendBeacon) f.sendBeacon(z, A); else {
+        var y = new XMLHttpRequest;
+        y.open("POST", z, !0), y.send(A)
+      }
+    }; d.pushState = function (r) {
+      return "function" == typeof d.onpushstate &&
+        d.onpushstate({ state: r }), setTimeout(n, c.delay || 10), i.apply(d, arguments)
+    }, n(),
+      a.ma = {
+        trackEvent: function o(r, s, t, u) { return n("event", r, s, t, u) },
+        trackException: function q(r, s) { return n("exception", null, null, null, null, r, s) }
+      }
+  })
+    (window, "UA-39366656-21", { anonymizeIp: true, colorDepth: true, characterSet: true, screenSize: true, language: true });
+</script>
+
+</head>
+<body class="bg-tile light" id="top" itemscope itemtype="http://schema.org/WebPage">
+  <main class="h-100 flex main flex-column">
+  <div class="flex pa3 flex-row justify-between align-items-center w-100">
+  <div class="d-block w-100">
+    <a class="github-button" href="https://github.com/mckeever02/mailtolink" data-icon="octicon-star" data-show-count="true" aria-label="Star mckeever02/mailtolink on GitHub">Star</a>
+  </div>
+  <div class="d-flex flex-row justify-center w-100 tc">
+    <a class="link f6" href="https://twitter.com/mmckvr">@mmckvr</a>
+    <span class="mh-3 seperator">&middot;</span>
+    <a class="link f6" href="https://www.buymeacoffee.com/mckvr">Buy me a beer 🍺</a>
+  </div>
+  <div class="d-block w-100 flex flex-row justify-end">
+    <button id="nav-light" class="button-reset bg-transparent b--none pa0 btn-mode" type="button" aria-label="Click to toggle Dark/Light mode">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <g fill="none" fill-rule="evenodd">
+          <path d="M15 21h3v3H6v-3H3v-3H0V6h3V3h3V0h12v3h3v3h3v12h-3v3h-6zm3-3v3z" />
+          <path d="M15 18v3h-3V3h3v3h3v3h3v6h-3v3h-3z" />
+        </g>
+      </svg>
+    </button>
+  </div>
+</div>
+
+<div class="mh2 w-90 center email-window h-100 flex flex-column">
+  <div class="pv3 ph2 ph3-ns flex justify-center items-center w-100 tc relative email-header">
+    <div class="absolute left-0 flex flex-row pl2 pl3-ns h-100 justify-between items-center">
+      <div class="app-circle dib"></div>
+      <div class="app-circle dib"></div>
+      <div class="app-circle dib"></div>
+    </div>
+    <h1 class="f6 f5-ns ma0 fw6">mailtolink.me</h1>
+  </div>
+  <div class="bb email-compose">
+    <div class="flex flex-row relative items-center justify-center">
+      <label for="recipient" class="f5-ns f6 gray-40 fw6 pl2 pl3-ns">To:</label>
+      <input id="recipient" tabindex="1" name="recipient" class="input input-reset tagify pv3 h-100 db w-100 bg-transparent b--none pl2 pl3-ns f5" type="text" autofocus>
+      <div class="mr2 mr3-ns">
+        <a class="f5-ns f7 fw6 br2 ph2 tdn tc pv2 dib btn-sm ccButton" href="javascript:void(0);" tabindex="6">Cc:</a>
+      </div>
+      <div class="mr2 mr3-ns">
+        <a class="f5-ns f7 fw6 br2 ph2 tdn tc pv2 dib btn-sm bccButton" href="javascript:void(0);" tabindex="7">Bcc:</a>
+      </div>
+    </div>
+    <div class="dn ccSection">
+      <div class="flex flex-row relative items-center justify-center">
+        <label for="cc" class="f5-ns f7 fw7 code gray-40 pl2 pl3-ns">Cc:</label>
+        <input id="cc" name="cc" tabindex="2" class="input input-reset pv3 h-100 db w-100 bg-transparent b--none pl2 pl3-ns f5" type="text">
+      </div>
+    </div>
+    <div class="dn bccSection">
+      <div class="flex flex-row relative items-center justify-center">
+        <label for="bcc" class="f5-ns f6 fw7 code gray-40 pl2 pl3-ns">Bcc:</label>
+        <input id="bcc" name="bcc" tabindex="3" class="input input-reset pv3 h-100 db w-100 bg-transparent b--none pl2 pl3-ns f5" type="text">
+      </div>
+    </div>
+    <div class="b--black bw1 flex flex-row relative items-center justify-center">
+      <label for="subject" class="f5-ns f6 fw7 code gray-40 pl2 pl3-ns">Subject:</label>
+      <input id="subject" tabindex="4" name="subject" class="input input-reset pv3 h-100 db w-100 bg-transparent b--none pl2 pl3-ns f5" type="text">
+    </div>
+  </div><!-- /bg-gray-10 -->
+  <div class="email-body w-100 pt2 pt3-ns">
+    <label for="body" class="f5-ns f6 gray-40 fw6 pl2 pl3-ns db">Body:</label>
+    <textarea aria-label="message" tabindex="5" id="body" name="body" class="pa2 pa3-ns w-100 input input-reset bg-transparent b--none f5-ns f6 lh-copy" placeholder="A simple markup generator for mailto links that takes care of the formatting for you. Just fill out the email and copy your code." id="body"></textarea>
+  </div>
+</div>
+
+
+<div class="absolute mailto-link-container w-100 flex justify-center ph2">
+  <div class="output mailto-link white bg-black br-pill b b--white flex-row items-center justify-between">
+    <div class="mailto-text">
+      <strong>mailto:</strong><span id="recipientOutput" class="recipientOutput"></span><span id="ccLabel" class="label">cc=</span><span class="ccOutput"></span><span id="bccLabel" class="label">bcc=</span><span class="bccOutput"></span><span id="subjectLabel" class="label">subject=</span><span class="subjectOutput"></span><span id="bodyLabel" class="label">body=</span><span class="bodyOutput"></span>
+    </div>
+    <a class="btn btn-md fw6 ml2 copyCode" href="javascript:void(0);">Copy Code</a>
+  </div>
+</div>
+</main>
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <script src="/scripts/index.js"></script>
+</body>
+</html>

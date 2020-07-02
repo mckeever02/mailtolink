@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="178px" height="178px" viewBox="0 0 178 178" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>tile</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="tile">
+            <path d="M90,90 L90,178 L88,178 L88,90 L2,90 L2,178 L-1.70530257e-13,178 L-1.27897692e-13,90 L-1.70530257e-13,88 L-1.70530257e-13,5.68434189e-14 L2,1.27897692e-13 L88,5.68434189e-14 L90,1.3500312e-13 L178,5.68434189e-14 L178,2 L90,2 L90,88 L178,88 L178,90 L90,90 Z M88,88 L88,2 L2,2 L2,88 L88,88 Z" id="Combined-Shape" fill="#E2FBF4" fill-rule="nonzero"></path>
+            <polygon id="Combined-Shape" fill="#CBF7EB" points="89.9991879 88.000259 90.0015355 88.0002593 90.0015355 88.0038248 98.9991928 88.0038248 98.9991928 90.003663 90.0015355 90.003663 90.0015355 99 88.0016973 99 88.0016973 90.003663 88.0008072 90.003663 88.0008121 89.999741 87.9984645 89.9997407 87.9984645 89.9961752 79.0008072 89.9961752 79.0008072 87.996337 87.9984645 87.996337 87.9984645 79 89.9983027 79 89.9983027 87.996337 89.9991928 87.996337"></polygon>
+        </g>
+    </g>
+</svg>

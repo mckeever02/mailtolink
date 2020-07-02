@@ -6,22 +6,38 @@ A quick and easy way to generate markup for mailto links without having to worry
 
 Give it a try! Visit [mailtolink.me](http://mailtolink.me) to see it in action!
 
-By [Michael Mckeever](http://mckvr.com)
+By [Michael Mckeever](https://twitter.com/mmckvr)
 
 
-## Dependencies
-The following tools should be installed before starting:
-* NodeJS, npm
-* Ruby, Gem, Bundler
-* Jekyll
-* Sass
+## Getting Started
 
-## How to setup this project
+Install all dependencies using npm:
 
-1. Make sure you have all of the dependencies installed
-2. Clone this repo using `git clone https://github.com/mckeever02/mailtolink.git`
-3. Navigate into the directory `cd mailtolink`
-4. Run `npm install` and `bundler install` to install dependencies
-5. Run `npm start` to start a development server.
+```
+$ nvm use
+$ npm install
+```
 
-For more commands see the boilerplate this was built upon: [Jekyll Webpack Boilerplate](https://github.com/sandoche/Jekyll-webpack-boilerplate)
+### To Develop
+
+```
+$ npm run dev
+```
+ And in debug mode:
+
+```
+$ npm run dev:debug
+```
+
+You can view the website at the given access URL:
+```
+$ light-server is listening at http://localhost:4000
+```
+
+The local url is configured in `.lightserverrc`
+
+### To Build
+
+```
+npm run build
+```
